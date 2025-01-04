@@ -87,6 +87,13 @@ function Dashboard() {
     setEditModalOpen(false);
   };
 
+//   const handleDelete = () => {
+//     setProductList((prev) =>
+//       prev.filter((product) => product.id !== productToDelete.id)
+//     );
+//     setDeleteModalOpen(false); // Fecha o modal após a exclusão
+//   };
+
   return (
     <div
       id="next-section"
@@ -324,6 +331,69 @@ function Dashboard() {
           </table>
         </Box>
       </Modal>
+
+      {/* Modal de Exclusão de Produto */}
+      {/* <Modal
+        open={isDeleteModalOpen}
+        onClose={closeDeleteModal}
+        aria-labelledby="modal-delete-title"
+        aria-describedby="modal-delete-description"
+      >
+        <Box sx={modalStyle}>
+          <Typography id="modal-delete-title" variant="h6" component="h2">
+            Tabela de Produtos - Exclusão
+          </Typography>
+          <table className="table-auto w-full border-collapse border border-gray-300 mt-4">
+            <thead>
+              <tr>
+                <th className="border border-gray-300 p-2">ID</th>
+                <th className="border border-gray-300 p-2">Nome</th>
+                <th className="border border-gray-300 p-2">Categoria</th>
+                <th className="border border-gray-300 p-2">Quantidade</th>
+                <th className="border border-gray-300 p-2">Preço</th>
+                <th className="border border-gray-300 p-2">Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              {productList.map((product) => (
+                <tr key={product.id}>
+                  <td className="border border-gray-300 p-2">{product.id}</td>
+                  <td className="border border-gray-300 p-2">{product.nome}</td>
+                  <td className="border border-gray-300 p-2">{product.categoria}</td>
+                  <td className="border border-gray-300 p-2">{product.quantidade}</td>
+                  <td className="border border-gray-300 p-2">{product.preco}</td>
+                  <td className="border justify-center items-center border-gray-300 p-2">
+                    <Button
+                      className="w-full"
+                      onClick={() => setProductToDelete(product)} // Definir o produto para exclusão
+                      variant="contained"
+                      color="error"
+                    >
+                      Excluir
+                    </Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex justify-end gap-2 mt-4">
+            <Button
+              onClick={closeDeleteModal}
+              variant="contained"
+              color="secondary"
+            >
+              Cancelar
+            </Button>
+            <Button
+              onClick={handleDelete} // Chama a função de exclusão
+              variant="contained"
+              color="error"
+            >
+              Excluir Produto
+            </Button>
+          </div>
+        </Box>
+      </Modal> */}
     </div>
   );
 }
