@@ -12,6 +12,16 @@ export default {
       animation: {
         spin: "spin 4s linear infinite", // Define a rotação contínua
       },
+      screens: {
+        tela1: '320px',
+        tela2: '375px',
+        tela3: '425px',
+        tela4: '640px',
+        tela5: '768px',
+        tela6: '1024px',
+        tela7: '1280px',
+        tela8: '1440px',
+      },
     },
   },
   plugins: [],

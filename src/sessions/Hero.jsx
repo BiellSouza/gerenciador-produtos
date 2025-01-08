@@ -38,7 +38,7 @@ function Hero() {
           </svg>
         </div>
         <div>
-          <h1 className="text-[#0CC89C] text-[45px] font-bold">
+          <h1 className="text-[#0CC89C] text-[45px] w-[90%] m-auto text-center font-bold">
             Dashboard <span className="text-terciary">Products</span>
           </h1>
         </div>
